@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="de7d4666-a600-4de2-8d1c-e7bb6c4a333c" 
+        solutionId="de7d4666-a600-4de2-8d1c-e7bb6c4a333c" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="PMO_SiteBuilder"
+        sharePointProductVersion="15.0">
+</package>
