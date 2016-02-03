@@ -1,11 +1,19 @@
 ﻿function sendData() {
-    
+
+    var dataModel = {
+        ProjectName: $("#projectName").val(),
+        StartDate: $("#startDate").val(),
+        ClientList: $("#clients").val(),
+        CdhList: $("#cdhMembers").val()
+    };
+
+    var newModel = JSON.stringify({ projectDetails: dataModel });
 
     $.ajax({
-        url: "/_vti_bin/PMOSiteBuilder/PMOSiteBuilderService.svc/GetTest",
-        //data: newModel,
+        url: "/_vti_bin/PMOSiteBuilder/PMOSiteBuilderService.svc/GenerateProject",
+        data: newModel,
         contentType: "application/json",
-        method: "GET",
+        method: "POST",
     })
     .done(function (data) {
         alert(data);
