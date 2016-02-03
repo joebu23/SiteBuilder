@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package dslVersion="1.0.0.0" 
-        Id="de7d4666-a600-4de2-8d1c-e7bb6c4a333c" 
-        solutionId="de7d4666-a600-4de2-8d1c-e7bb6c4a333c" 
-        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
-        name="PMO_SiteBuilder"
-        sharePointProductVersion="15.0">
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="de7d4666-a600-4de2-8d1c-e7bb6c4a333c" solutionId="de7d4666-a600-4de2-8d1c-e7bb6c4a333c" resetWebServer="false" sharePointProductVersion="15.0" name="PMO_SiteBuilder" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <projectItems>
+    <projectItemReference itemId="7364baaa-1000-429e-b4d3-5b14f03f2595" />
+    <projectItemReference itemId="c3103f87-b6b9-4ef3-bc83-1ffecd0213a4" />
+  </projectItems>
 </package>

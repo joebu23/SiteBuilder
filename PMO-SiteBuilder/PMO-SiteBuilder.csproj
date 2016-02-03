@@ -14,6 +14,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SandboxedSolution>False</SandboxedSolution>
+    <TokenReplacementFileExtensions>svc</TokenReplacementFileExtensions>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,16 +46,38 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.SharePoint" />
     <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ISAPI\PMOSiteBuilder\IPMOSiteBuilderService.cs" />
+    <Compile Include="ISAPI\PMOSiteBuilder\PMOSiteBuilderService.svc.cs">
+      <DependentUpon>PMOSiteBuilderService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\PMO-SiteBuilder\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\PMO-SiteBuilder\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ISAPI\PMOSiteBuilder\web.config" />
+    <None Include="ISAPI\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c3103f87-b6b9-4ef3-bc83-1ffecd0213a4}</SharePointProjectItemId>
+    </None>
     <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7364baaa-1000-429e-b4d3-5b14f03f2595}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{de7d4666-a600-4de2-8d1c-e7bb6c4a333c}</PackageId>
     </None>
@@ -64,6 +87,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\" />
+    <Folder Include="Layouts\PMO-SiteBuilder\content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ISAPI\PMOSiteBuilder\PMOSiteBuilderService.svc" />
+    <Content Include="Layouts\PMO-SiteBuilder\Default.aspx" />
+    <Content Include="Layouts\PMO-SiteBuilder\scripts\app.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
